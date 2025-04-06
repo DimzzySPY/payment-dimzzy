@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pembayaran Dimzzy Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #74ebd5, #ACB6E5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1s ease;
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #f0f0f0;
+    }
+
+    .wa-button {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .wa-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubbles span {
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: bubbleRise 15s linear infinite;
+      bottom: -50px;
+    }
+
+    @keyframes bubbleRise {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-1000px); opacity: 0; }
+    }
+
+    .bubbles span:nth-child(1) { left: 10%; width: 8px; height: 8px; animation-duration: 12s; }
+    .bubbles span:nth-child(2) { left: 30%; width: 12px; height: 12px; animation-duration: 16s; }
+    .bubbles span:nth-child(3) { left: 60%; width: 14px; height: 14px; animation-duration: 14s; }
+    .bubbles span:nth-child(4) { left: 80%; width: 10px; height: 10px; animation-duration: 18s; }
+  </style>
+</head>
+<body>
+  <div class="bubbles">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="card">
+    <h2>Pembayaran Dimzzy Market via QRIS</h2>
+    <img src="qris-ikyy.png" alt="QRIS Dimzzy Market">
+    <p>Silakan scan kode QR di atas untuk melakukan pembayaran ke <strong>Dimzzy Market</strong>.</p>
+    <p>Setelah itu, konfirmasi lewat WhatsApp:</p>
+    <a class="wa-button" href="https://wa.me/6283157185069?text=Halo%20Dimzzy%20Market,%20saya%20sudah%20melakukan%20pembayaran%20via%20QRIS." target="_blank">
+      Hubungi via WhatsApp
+    </a>
+  </div>
+</body>
+</html>
